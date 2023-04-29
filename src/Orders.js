@@ -3,7 +3,7 @@ import { db } from "./firebase";
 import './Orders.css';
 import { useStateValue } from "./StateProvider";
 import Order from './Order';
-import { onSnapshot, orderBy, query, collection, doc, getDoc } from 'firebase/firestore';
+import { onSnapshot, orderBy, query, collection } from 'firebase/firestore';
 
 function Orders() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -11,7 +11,6 @@ function Orders() {
 
   useEffect(() => {
     if(user) {
-        // const ref = getDoc(collection(db, 'users', user?.uid, 'orders'))
         const orderedOrders = query(collection(db, 'users', user?.uid, 'orders'), orderBy('created', 'desc'))
         onSnapshot(orderedOrders, snapshot => {
         setOrders(snapshot.docs.map(doc => ({

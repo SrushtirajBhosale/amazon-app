@@ -53,9 +53,6 @@ function Payment() {
         // paymentIntent = payment confirmation
         console.log('Woohoo your order is placed!', paymentIntent);
 
-        // addDoc(collection(db, 'users', user?.uid));
-      // addDoc(collection(db, 'users'))
-      // console.log(user?.uid)
       const ref = doc(db, 'users', user?.uid, 'orders', paymentIntent.id)
       setDoc(ref, {
         basket: basket,
