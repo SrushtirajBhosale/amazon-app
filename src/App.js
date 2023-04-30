@@ -18,7 +18,7 @@ const promise = loadStripe(
 );
 
 function App() {
-  const [{ user}, dispatch] = useStateValue();
+  const [ dispatch ] = useStateValue();
 
 
   useEffect(() => {

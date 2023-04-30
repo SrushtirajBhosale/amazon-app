@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Subtotal() {
   const navigate = useNavigate();
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   return (
     <div className='subtotal'>
