@@ -6,9 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  max-width: 100%;
-  @media (max-width:768px) {
-    display: flex;
+  @media (max-width: 768px) {
     overflow: hidden;
   }
 }
@@ -18,7 +16,7 @@
   object-fit: contain;
   margin: 0 20px;
   margin-top: 18px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     width:70px;
     margin: 18px 10px 0 10px;
   }
@@ -46,6 +44,9 @@
 
 .header__optionLineOne {
   font-size: 10px;
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
 }
 
 .header__optionLineTwo {
@@ -72,10 +73,6 @@
 .header__nav {
   display: flex;
   justify-content: space-evenly;
-  @media (max-width:768px) {
-    display: flex;
-    justify-content: center;
-  }
 }
   
 

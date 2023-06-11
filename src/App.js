@@ -11,20 +11,20 @@ import Payment from './Payment';
 import Orders from './Orders';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import { onAuthStateChanged } from 'firebase/auth';
 
 const promise = loadStripe(
-  'pk_test_51N0UP3SJqZrNQtAd5bei4OqrTQCZkmzUgjy2v76Lbn9dB1ZPSQoQB4oyiSlJZbxHeUcfY9TLJHZc8VEcQxLHlM8u009E9OplMj'
+  `${process.env.REACT_APP_PUBLISHABLE_API_KEY}`
+  // 'pk_test_51N0UP3SJqZrNQtAd5bei4OqrTQCZkmzUgjy2v76Lbn9dB1ZPSQoQB4oyiSlJZbxHeUcfY9TLJHZc8VEcQxLHlM8u009E9OplMj'
 );
 
 function App() {
-  const [ dispatch ] = useStateValue();
+  const [{}, dispatch ] = useStateValue();
 
 
   useEffect(() => {
     // will only run once when the app component loads...
 
-    onAuthStateChanged(auth, authUser => {
+    auth.onAuthStateChanged(authUser => {
       // console.log('THE USER IS >>>', authUser);
 
       if (authUser) {

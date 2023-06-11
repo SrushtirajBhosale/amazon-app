@@ -17,10 +17,12 @@
 
 .checkoutProduct__info > button {
     background: #f0c14b;
+    padding: 3px;
     border: 1px solid;
+    border-radius: 6px;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
+    color: #000000;
 }
 
 .checkoutProduct__image {

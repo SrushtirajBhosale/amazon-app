@@ -1,7 +1,11 @@
 .orders {
     padding: 20px 80px;
+    @media (max-width: 768px) {
+        padding: 10px 40px;
+    }
 }
 
 .orders > h1 {
     margin: 30px 0;
 }
+

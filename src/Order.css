@@ -4,15 +4,25 @@
     border: 1px solid lightgray;
     background-color: white;
     position: relative;
+    @media (max-width: 768px) {
+      /* margin: 10px 0; */
+    }
 }
 
 .order__id {
     position: absolute;
     top: 40px;
     right: 20px;
-  }
+}
 
 .order__total {
     font-weight: 500;
     text-align: right;
+}
+
+.order > p {
+  @media (max-width: 768px) {
+    padding-top: 20px;
+    margin-top: 10px;
   }
+}

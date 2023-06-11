@@ -1,16 +1,17 @@
 import React from 'react';
 import './Checkout.css';
+import checkoutHeading from './images/checkout-heading.jpg'
 import Subtotal from './Subtotal';
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 
 function Checkout() {
-  const [{ user, basket}] = useStateValue();
+  const [{ user, basket}, dispatch] = useStateValue();
   
   return (
     <div className='checkout'>
       <div className='checkout__left'>
-        <img className='checkout__ad' src="/images/checkout-heading.jpg" alt="" />
+        <img className='checkout__ad' src={checkoutHeading} alt="" />
         <div>
           <h3>Namaste, {user?.email}</h3>
           <h2 className='checkout__title'>

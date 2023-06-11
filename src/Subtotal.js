@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Subtotal() {
   const navigate = useNavigate();
-  const [{ basket, user }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className='subtotal'>

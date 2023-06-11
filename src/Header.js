@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import amazon from './images/amazon.png'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
@@ -8,11 +9,11 @@ import { auth } from './firebase';
 import { signOut } from 'firebase/auth';
 
 function Header() {
-  const [{ basket, user}] = useStateValue();
+  const [{ basket, user}, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
     if (user) {
-      signOut(auth);
+      auth.signOut();
     }
   }
 
@@ -23,7 +24,7 @@ function Header() {
       <Link to='/'>
         <img 
           className='header__logo'
-          src="/images/amazon.png" alt="" 
+          src={amazon} alt="" 
         />
       </Link>
 

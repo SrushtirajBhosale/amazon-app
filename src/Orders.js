@@ -6,7 +6,7 @@ import Order from './Order';
 import { onSnapshot, orderBy, query, collection } from 'firebase/firestore';
 
 function Orders() {
-  const [{ user }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

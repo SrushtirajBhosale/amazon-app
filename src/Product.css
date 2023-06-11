@@ -10,6 +10,10 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    @media (max-width: 768px) {
+        margin: 5px;
+        padding: 9px;
+    }
 }
 
 .product__rating {
@@ -26,6 +30,7 @@
 
 .product > button {
     background: #f0c14b;
+    padding: 3px;
     border-radius: 6px;
     border: 1px solid;
     margin-top: 10px;
