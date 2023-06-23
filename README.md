@@ -1,15 +1,15 @@
 <h1 align="center">
   AMAZON
 </h1>
-<h3>
+<h3 align="center">
   Tried to clone Amazon using React.Js, firebase & stripe.
 </h3>
 
-<h4 align="center">
+<h3 align="center">
 Live Application🚀
 <br>
 <a href="https://app-186f4.web.app">amazon-app</a>
-</h4>
+</h3>
 
 <h4>
   Technology Used
