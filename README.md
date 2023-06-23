@@ -30,12 +30,12 @@ Live Application🚀
   </p>
 </h4>
 
-<h4>
-<img src="./src/images/Screenshot1.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot2.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot3.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot4.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot5.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot6.png" width="80%" align="center"/>
-<img src="./src/images/Screenshot7.png" width="80%" align="center"/>
-</h4>
+<div align="center">
+<img src="./src/images/Screenshot1.png" width="80%"/>
+<img src="./src/images/Screenshot2.png" width="80%"/>
+<img src="./src/images/Screenshot3.png" width="80%"/>
+<img src="./src/images/Screenshot4.png" width="80%"/>
+<img src="./src/images/Screenshot5.png" width="80%"/>
+<img src="./src/images/Screenshot6.png" width="80%"/>
+<img src="./src/images/Screenshot7.png" width="80%"/>
+</div>
