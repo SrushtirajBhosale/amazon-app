@@ -1,8 +1,7 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
-require('dotenv').config();
-const stripe = require('stripe')(`${process.env.STRIPE_SECRET_API_KEY}`);
+const stripe = require("stripe")(`${process.env.STRIPE_SECRET_API_KEY}`);
 
 // API
 
@@ -23,24 +22,18 @@ app.post("/payments/create", async (request, response) => {
   console.log("Payment Request Recieved for this amount >>>", total);
 
   const paymentIntent = await stripe.paymentIntents.create({
-  amount: total, // subunits of the currency
-  currency: "inr",
-  payment_method_types:['card']
+    amount: total, // subunits of the currency
+    currency: "inr",
   });
 
   // Ok - Created
   response.status(201).send({
-    clientSecrete: paymentIntent.client_secrete,
+    clientSecret: paymentIntent.client_secret,
   });
-})
+});
 
 // - Listen command
 exports.api = functions.https.onRequest(app);
 
 // Example endpoint
-// http://127.0.0.1:5001/fir-95507/us-central1/api
 // http://127.0.0.1:5001/app-186f4/us-central1/api
-
-// app.listen(8080, ()=> {
-//   console.log("server created successfully");
-// })
